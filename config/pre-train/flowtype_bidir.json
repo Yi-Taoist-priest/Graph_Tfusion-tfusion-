@@ -1,0 +1,22 @@
+{
+  "command": "pre-train",
+  "detection_model": "placeholder",
+  "data_path": "/liuluping/shenzhiju/TFusion/datasets/flowtype_ablation",
+  "log_path": "./log/flowtype_ablation/pretrain/monday_prefix_bidir",
+  "fig_path": "./figure/flowtype_ablation/pretrain/monday_prefix_bidir",
+  "traffic_model_path": "./save/traffic_model/flowtype_ablation",
+  "traffic_model_tag": "monday_prefix_bidir",
+  "data_tag": {
+    "monday_prefix_bidir": 0.5
+  },
+  "gpu_enable": [],
+  "data_construct_param": {
+    "contrast_batch_size": 50,
+    "pre_train_ratio": 0.2,
+    "segment_len": 100
+  },
+  "train_param": {
+    "lr": 0.001,
+    "num_epoch": 10
+  }
+}

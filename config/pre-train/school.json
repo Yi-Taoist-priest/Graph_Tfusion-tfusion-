@@ -1,0 +1,27 @@
+{
+  "command": "pre-train",
+  "detection_model": "placeholder",
+  "data_path": "./data/pretrain/test",
+  "log_path": "./log/pre_train/school",
+  "fig_path": "./figure/pre_train/school",
+  "traffic_model_path": "./save/traffic_model/school",
+  "traffic_model_tag": "school",
+  "d_graph": 16,
+  "d_fused_out": 384,
+  "data_tag": {
+    "school": 0.5
+  },
+  "disabled": {},
+  "gpu_enable": [
+    0
+  ],
+  "data_construct_param": {
+    "contrast_batch_size": 100,
+    "pre_train_ratio": 0.2,
+    "segment_len": 100
+  },
+  "train_param": {
+    "lr": 0.001,
+    "num_epoch": 20
+  }
+}

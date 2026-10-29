@@ -1,0 +1,64 @@
+{
+  "command": "train",
+  "detection_model": "rforest",
+  "use_graph": true,
+  "graph_feature_mode": "structural",
+  "model_mode": "causal_graph_crossmodal",
+  "checkpoint_load_scope": "backbone_only",
+  "d_graph": 16,
+  "data_path": "./data/train-test/DDOS_19_v2/CICDDoS2019",
+  "log_path": "./log/train/DDOS_19/UDP",
+  "fig_path": "./figure/train/DDOS_19/UDP",
+  "traffic_model_path": "./save/traffic_model/pretrain",
+  "traffic_model_tag": "campus_20260423_Monday_full",
+  "detection_model_path": "./save/detection_model/DDOS_19/UDP",
+  "data_tag": {
+    "UDP": 0.5
+  },
+  "gpu_enable": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "data_construct_param": {
+    "contrast_batch_size": 50,
+    "pre_train_ratio": 0,
+    "segment_len": 100,
+    "host_feature_mode": "causal",
+    "host_window": 10.0,
+    "graph_context_mode": "full_stream_causal",
+    "graph_window": 10.0,
+    "train_sample_ratio": 0.02
+  },
+  "train_param": {
+    "lr": 0.1,
+    "num_epoch": 50,
+    "validation_ratio": 0.2,
+    "seed": 777,
+    "patience": 10,
+    "grad_clip": 5.0,
+    "threshold_strategy": "fixed_0.5",
+    "threshold_transfer": "absolute",
+    "optimize_threshold": false
+  },
+  "data_split": {
+    "use_pre_split": true,
+    "train": {
+      "enable": true,
+      "path": "./data/train-test/CICDDoS2019/UDP/train.json"
+    },
+    "test": {
+      "enable": true,
+      "path": "./data/train-test/CICDDoS2019/UDP/test.json"
+    },
+    "val": {
+      "enable": false,
+      "path": "./data/train-test/CICDDoS2019/UDP/val.json"
+    }
+  }
+}

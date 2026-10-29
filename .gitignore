@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+.codex_work/
+.worktrees/
+
+# 数据与运行产物（体积大，不入库）
+data/
+save/
+log/
+figure/
+runs/
+audit/
+handoff/
+*.log
+*.pcap
+*.pcapng
+*.csv
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.hdf5
+*.onnx
+*.pkl
+*.joblib
+*.npz
+*.npy
+*.tmp
+
+# 非主线代码 / 文档（本地保留，不进版本库；消融实验仍可运行）
+tests/
+ablations/
+comparison/
+dashboard/r3v_progress.html
+FRAMEWORK.md
+
+# 保留：
+#   config/ scripts/ src/
+#   dashboard/ 目录（r3v_progress.html 是生成物，已忽略）
+#   README.md / requirements.txt
